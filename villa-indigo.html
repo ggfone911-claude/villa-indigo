@@ -556,15 +556,17 @@ footer strong { color: white; }
 
   <!-- Sub-nav maison -->
   <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:2.5rem;">
-    <button class="nav-btn active" onclick="showSub('wifi', this)" data-fr="Wi-Fi & Accès" data-en="Wi-Fi & Access">Wi-Fi & Accès</button>
+    <button class="nav-btn active" onclick="showSub('notremaison', this)" data-fr="Notre Maison" data-en="Our Home">Notre Maison</button>
+    <button class="nav-btn" onclick="showSub('wifi', this)" data-fr="Wi-Fi & Accès" data-en="Wi-Fi & Access">Wi-Fi & Accès</button>
     <button class="nav-btn" onclick="showSub('electromenager', this)" data-fr="Électroménager" data-en="Appliances">Électroménager</button>
     <button class="nav-btn" onclick="showSub('tv', this)" data-fr="Télévision" data-en="Television">Télévision</button>
     <button class="nav-btn" onclick="showSub('exterieur', this)" data-fr="Extérieur" data-en="Outdoor">Extérieur</button>
-    <button class="nav-btn" onclick="showSub('urgences', this)" data-fr="Urgences" data-en="Emergency">Urgences</button>
+    <button class="nav-btn" onclick="showSub('stores', this)" data-fr="Stores" data-en="Blinds">Stores</button>
+    <button class="nav-btn" onclick="showSub('urgences', this)" data-fr="Contacts" data-en="Contacts">Contacts</button>
   </div>
 
   <!-- WIFI -->
-  <div id="sub-wifi" class="sub-section">
+  <div id="sub-wifi" class="sub-section" style="display:none;">
     <div class="section-title" data-fr="Wi-Fi & Accès" data-en="Wi-Fi & Access">Wi-Fi & Accès</div>
     <div class="section-subtitle" data-fr="Connexion internet et informations pratiques" data-en="Internet connection and practical information">Connexion internet et informations pratiques</div>
 
@@ -572,9 +574,9 @@ footer strong { color: white; }
       <div class="wifi-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg></div>
       <div>
         <div class="wifi-label" data-fr="Réseau Wi-Fi" data-en="Wi-Fi Network">Réseau Wi-Fi</div>
-        <div class="wifi-code">VillaIndigo_Ré</div>
+        <div class="wifi-code">Villaindigo</div>
       </div>
-      <button class="copy-btn" onclick="copyWifi('VillaIndigo_Ré')" data-fr="Copier le réseau" data-en="Copy network"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;flex-shrink:0;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copier le réseau</button>
+      <button class="copy-btn" onclick="copyWifi('Villaindigo')" data-fr="Copier le réseau" data-en="Copy network"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;flex-shrink:0;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copier le réseau</button>
     </div>
 
     <div class="wifi-card" style="background: var(--ocean-light); margin-top: -8px; border-radius: 0 0 var(--radius) var(--radius);">
@@ -584,7 +586,13 @@ footer strong { color: white; }
         <div class="wifi-code" id="wifi-password" style="filter: blur(6px); cursor: pointer; transition: filter 0.3s;" onclick="revealPassword()" title="Cliquer pour révéler">••••••••••</div>
         <div style="font-size:11px; opacity:0.6; margin-top:4px;" data-fr="Cliquer pour révéler" data-en="Click to reveal">Cliquer pour révéler</div>
       </div>
-      <button class="copy-btn" onclick="copyWifi('IndIGO2024Re!')" data-fr="Copier" data-en="Copy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;flex-shrink:0;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copier</button>
+      <button class="copy-btn" onclick="copyWifi('Villa@17740')" data-fr="Copier" data-en="Copy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;flex-shrink:0;"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copier</button>
+    </div>
+
+    <div style="text-align:center; margin-top:1.5rem; padding:1.5rem; background:var(--klein-pale); border-radius:var(--radius);">
+      <div style="font-size:11px; font-weight:600; color:var(--klein); text-transform:uppercase; letter-spacing:0.15em; margin-bottom:1rem;" data-fr="Scanner pour se connecter" data-en="Scan to connect">Scanner pour se connecter</div>
+      <img src="data:image/png;base64,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" alt="QR Code WiFi" style="width:160px;height:160px;border-radius:8px;display:inline-block;">
+      <div style="font-size:11px; color:var(--text-muted); margin-top:0.75rem;" data-fr="Pointez l'appareil photo de votre téléphone vers ce code" data-en="Point your phone camera at this code">Pointez l'appareil photo de votre téléphone vers ce code</div>
     </div>
 
     <div style="margin-top: 2rem;">
@@ -799,12 +807,60 @@ footer strong { color: white; }
         <div class="card-title" data-fr="Piscine" data-en="Swimming pool">Piscine</div>
         <div class="card-desc" data-fr="Piscine chauffée à 28°. Ne pas modifier la température — cela risquerait de la faire tourner et de la rendre inutilisable. Si le niveau d'eau descend sous le skimmer, remplir avec le tuyau situé dans la cuisine d'été sous l'évier. L'entretien est assuré par la conciergerie — merci de ne pas toucher aux équipements, à l'exception de l'épuisette à votre disposition. Afin d'éviter le sable dans la piscine, une douche extérieure chauffée est à votre disposition pour vous rincer en rentrant de la plage." data-en="Heated pool at 28°C. Do not adjust the temperature — this could cause the system to malfunction and make it unusable. If the water level drops below the skimmer, use the hose located in the summer kitchen under the sink. Maintenance is handled by the concierge — please do not touch the equipment, except for the net which is available for your use. To avoid sand in the pool, a heated outdoor shower is available for you to rinse off when coming back from the beach.">Piscine chauffée à 28°. Ne pas modifier la température — cela risquerait de la faire tourner et de la rendre inutilisable. Si le niveau d'eau descend sous le skimmer, remplir avec le tuyau situé dans la cuisine d'été sous l'évier. L'entretien est assuré par la conciergerie — merci de ne pas toucher aux équipements, à l'exception de l'épuisette à votre disposition. Afin d'éviter le sable dans la piscine, une douche extérieure chauffée est à votre disposition pour vous rincer en rentrant de la plage.</div>
       </div>
+
+
+    </div>
+
+    <div class="tip-box" style="margin-top:1.5rem;">
+      <span style="display:inline-block;width:20px;height:20px;flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+      <span data-fr="Les coussins blancs de la terrasse sont fragiles à la crème solaire. Merci de glisser une serviette entre vous et le coussin avant de vous installer au soleil." data-en="The white terrace cushions are delicate — sunscreen stains them permanently. Please place a towel between yourself and the cushion before sitting in the sun.">Les coussins blancs de la terrasse sont fragiles à la crème solaire. Merci de glisser une serviette entre vous et le coussin avant de vous installer au soleil.</span>
     </div>
   </div>
 
+  <!-- STORES -->
+  <div id="sub-stores" class="sub-section" style="display:none;">
+    <div class="section-title" data-fr="Store & Occultants" data-en="Blinds & Shutters">Store & Occultants</div>
+    <div class="section-subtitle" data-fr="Commandes électriques et télécommandes" data-en="Electric controls and remotes">Commandes électriques et télécommandes</div>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:2rem;">
+
+      <div class="card">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="4" rx="1"/><line x1="12" y1="6" x2="12" y2="22"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div>
+          <div>
+            <div class="card-title" data-fr="Store cuisine" data-en="Kitchen blind">Store cuisine</div>
+            <div class="card-desc" data-fr="Le store de la cuisine est électrique. La télécommande est posée sur le côté du meuble de cuisine — un bouton pour monter, un pour descendre, un pour arrêter en position intermédiaire." data-en="The kitchen blind is electric. The remote is on the side of the kitchen unit — one button to raise, one to lower, one to stop at any position.">Le store de la cuisine est électrique. La télécommande est posée sur le côté du meuble de cuisine — un bouton pour monter, un pour descendre, un pour arrêter en position intermédiaire.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="4" rx="1"/><line x1="12" y1="6" x2="12" y2="22"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="14" x2="20" y2="14"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div>
+          <div>
+            <div class="card-title" data-fr="Store salle TV" data-en="TV room blind">Store salle TV</div>
+            <div class="card-desc" data-fr="Le store de la salle TV est également électrique. La télécommande se trouve le long de la porte de la salle TV." data-en="The TV room blind is also electric. The remote is along the TV room door.">Le store de la salle TV est également électrique. La télécommande se trouve le long de la porte de la salle TV.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><rect x="9" y="13" width="6" height="8"/></svg></div>
+          <div>
+            <div class="card-title" data-fr="Velux chambre verte" data-en="Green bedroom Velux">Velux chambre verte</div>
+            <div class="card-desc" data-fr="Le velux de la chambre verte est commandé à distance : ouverture / fermeture et volet occultant intégré. Les interrupteurs de commande sont situés à droite en entrant dans la chambre, derrière la porte." data-en="The green bedroom Velux is remote-controlled: opening / closing and integrated blackout blind. The control switches are on the right as you enter the room, behind the door.">Le velux de la chambre verte est commandé à distance : ouverture / fermeture et volet occultant intégré. Les interrupteurs de commande sont situés à droite en entrant dans la chambre, derrière la porte.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
   <!-- URGENCES -->
   <div id="sub-urgences" class="sub-section" style="display:none;">
-    <div class="section-title" data-fr="Contacts & Urgences" data-en="Contacts & Emergency">Contacts & Urgences</div>
+    <div class="section-title" data-fr="Contacts" data-en="Contacts">Contacts</div>
     <div class="section-subtitle" data-fr="Numéros utiles à conserver" data-en="Useful numbers to keep">Numéros utiles à conserver</div>
 
     <div class="alert">
@@ -814,9 +870,9 @@ footer strong { color: white; }
 
     <div class="urgent-grid">
       <div class="urgent-card priority">
-        <div class="urgent-label" data-fr="Propriétaire" data-en="Owner">Propriétaire</div>
-        <div class="urgent-name" data-fr="Villa Indigo" data-en="Villa Indigo">Villa Indigo</div>
-        <a href="tel:+33600000000" class="urgent-tel">06 00 00 00 00</a>
+        <div class="urgent-label" data-fr="Conciergerie" data-en="Concierge">Conciergerie</div>
+        <div class="urgent-name">Emmanuelle</div>
+        <a href="tel:+33670033073" class="urgent-tel">06 70 03 30 73</a>
       </div>
       <div class="urgent-card priority">
         <div class="urgent-label">SAMU</div>
@@ -838,16 +894,8 @@ footer strong { color: white; }
         <div class="urgent-name">Sainte-Marie-de-Ré</div>
         <a href="tel:+33546093075" class="urgent-tel">05 46 09 30 75</a>
       </div>
-      <div class="urgent-card">
-        <div class="urgent-label" data-fr="Plombier urgence" data-en="Emergency plumber">Plombier urgence</div>
-        <div class="urgent-name" data-fr="Dépannage 24h/24" data-en="24/7 repairs">Dépannage 24h/24</div>
-        <a href="tel:+33600000001" class="urgent-tel">06 00 00 00 01</a>
-      </div>
-      <div class="urgent-card">
-        <div class="urgent-label" data-fr="Électricien urgence" data-en="Emergency electrician">Électricien urgence</div>
-        <div class="urgent-name" data-fr="Dépannage 24h/24" data-en="24/7 repairs">Dépannage 24h/24</div>
-        <a href="tel:+33600000002" class="urgent-tel">06 00 00 00 02</a>
-      </div>
+      
+      
       <div class="urgent-card">
         <div class="urgent-label" data-fr="Gendarmerie" data-en="Police">Gendarmerie</div>
         <div class="urgent-name">Saint-Martin-de-Ré</div>
@@ -855,6 +903,54 @@ footer strong { color: white; }
       </div>
     </div>
   </div>
+
+  <!-- NOTRE MAISON -->
+  <div id="sub-notremaison" class="sub-section">
+    <div class="section-title" data-fr="Notre Maison" data-en="Our Home">Notre Maison</div>
+    <div class="section-subtitle" data-fr="L'esprit des lieux & les bons gestes" data-en="The spirit of the place & how to care for it">L'esprit des lieux & les bons gestes</div>
+
+    <!-- ÉDITO -->
+    <div style="background:var(--klein-pale); border-radius:var(--radius); padding:2rem; margin-bottom:2rem; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:-20px; right:-20px; width:120px; height:120px; background:var(--klein-light); border-radius:50%; opacity:0.3;"></div>
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--klein); margin-bottom:1.25rem;" data-fr="— Esprit des lieux —" data-en="— Spirit of the place —">— Esprit des lieux —</div>
+      <p style="font-size:15px; line-height:1.8; color:var(--text); margin-bottom:1.25rem; font-style:italic;" data-fr="Villa Indigo est née d'une conviction simple : le confort véritable naît de la qualité des matériaux et de la rigueur du détail." data-en="Villa Indigo was born from a simple conviction: true comfort comes from the quality of materials and the precision of detail.">Villa Indigo est née d'une conviction simple : le confort véritable naît de la qualité des matériaux et de la rigueur du détail.</p>
+      <p style="font-size:14px; line-height:1.85; color:var(--text);" data-fr="Béton ciré au sol, marbre sur les plans de travail, bois brut sur les menuiseries — chaque surface a été choisie pour sa matière, sa texture, sa permanence. Les murs blancs font le silence et laissent parler la lumière de Ré, cette lumière particulière qui change d'heure en heure. Deux espaces viennent ponctuer cet univers épuré : la chambre verte, couleur forêt et sérénité, et le cube Klein, bleu outremer absolu — une signature. Un intérieur contemporain et minimaliste, pensé pour que rien ne distraie de l'essentiel : le repos, la mer, le temps." data-en="Polished concrete on the floors, marble on the worktops, raw wood on the joinery — every surface was chosen for its texture, its materiality, its permanence. White walls create silence and let the light of Ré speak — that particular light that shifts hour by hour. Two spaces punctuate this pared-back world: the green bedroom, in the colour of forest and serenity, and the Klein cube, absolute ultramarine blue — a signature. A contemporary, minimalist interior designed so that nothing distracts from what matters: rest, the sea, time.">Béton ciré au sol, marbre sur les plans de travail, bois brut sur les menuiseries — chaque surface a été choisie pour sa matière, sa texture, sa permanence. Les murs blancs font le silence et laissent parler la lumière de Ré, cette lumière particulière qui change d'heure en heure. Deux espaces viennent ponctuer cet univers épuré : la chambre verte, couleur forêt et sérénité, et le cube Klein, bleu outremer absolu — une signature. Un intérieur contemporain et minimaliste, pensé pour que rien ne distraie de l'essentiel : le repos, la mer, le temps.</p>
+    </div>
+
+    <!-- BONS GESTES -->
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:10px; font-weight:700; letter-spacing:0.25em; text-transform:uppercase; color:var(--klein); margin-bottom:1.25rem;" data-fr="— Prendre soin de votre maison —" data-en="— How to care for your home —">— Prendre soin de votre maison —</div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:2rem;">
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; background:white; border:1px solid var(--stone); border-radius:var(--radius); padding:1.25rem;">
+        <span style="color:var(--klein); flex-shrink:0; width:22px; height:22px; margin-top:1px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
+        <div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.35rem;" data-fr="Coussins blancs de la terrasse" data-en="White terrace cushions">Coussins blancs de la terrasse</div>
+          <div style="font-size:13px; color:var(--text-muted); line-height:1.6;" data-fr="Les coussins blancs sont en tissu délicat et particulièrement sensibles à la crème solaire, dont les taches sont irréversibles. Merci de glisser une serviette entre vous et le coussin dès que vous êtes en maillot ou au soleil." data-en="The white cushions are made from delicate fabric and are particularly sensitive to sunscreen, which stains them permanently. Please place a towel between yourself and the cushion whenever you are in swimwear or sitting in the sun.">Les coussins blancs sont en tissu délicat et particulièrement sensibles à la crème solaire, dont les taches sont irréversibles. Merci de glisser une serviette entre vous et le coussin dès que vous êtes en maillot ou au soleil.</div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; background:white; border:1px solid var(--stone); border-radius:var(--radius); padding:1.25rem;">
+        <span style="color:var(--klein); flex-shrink:0; width:22px; height:22px; margin-top:1px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
+        <div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.35rem;" data-fr="Tables en céramique" data-en="Ceramic tables">Tables en céramique</div>
+          <div style="font-size:13px; color:var(--text-muted); line-height:1.6;" data-fr="Les plateaux en céramique résistent à la chaleur et aux rayures légères, mais sont sensibles aux chocs. Merci de ne pas poser d'objets lourds brusquement, de ne pas monter dessus, et d'éviter tout impact direct." data-en="Ceramic table tops are heat and scratch resistant, but sensitive to impact. Please do not drop heavy objects on them, do not stand on them, and avoid any direct impact.">Les plateaux en céramique résistent à la chaleur et aux rayures légères, mais sont sensibles aux chocs. Merci de ne pas poser d'objets lourds brusquement, de ne pas monter dessus, et d'éviter tout impact direct.</div>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:flex-start; gap:1rem; background:white; border:1px solid var(--stone); border-radius:var(--radius); padding:1.25rem;">
+        <span style="color:var(--klein); flex-shrink:0; width:22px; height:22px; margin-top:1px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
+        <div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:0.35rem;" data-fr="Meubles de salle de bain" data-en="Bathroom furniture">Meubles de salle de bain</div>
+          <div style="font-size:13px; color:var(--text-muted); line-height:1.6;" data-fr="Les meubles de salle de bain ne sont pas conçus pour supporter le poids d'une personne. Merci de ne pas vous y asseoir ou appuyer dessus — les fixations ne sont pas dimensionnées pour cet usage." data-en="Bathroom furniture is not designed to bear a person's weight. Please do not sit or lean on them — the fixings are not built for this purpose.">Les meubles de salle de bain ne sont pas conçus pour supporter le poids d'une personne. Merci de ne pas vous y asseoir ou appuyer dessus — les fixations ne sont pas dimensionnées pour cet usage.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
 </div>
 </div>
@@ -1870,7 +1966,7 @@ function toggleAcc(id) {
 
 // ── WIFI ──
 let passwordRevealed = false;
-const realPassword = 'IndIGO2024Re!';
+const realPassword = 'Villa@17740';
 
 function revealPassword() {
   const el = document.getElementById('wifi-password');
